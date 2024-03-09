@@ -1,7 +1,7 @@
 use reqwest;
 use super::models::WeatherData;
 
-async fn fetch_weather(api_key: &str, city: String) -> Result<(), reqwest::Error> {
+pub async fn fetch_weather(api_key: &str, city: String) -> Result<(), reqwest::Error> {
     // Build the URL for the OpenWeatherMap API request
     let url = format!(
         "https://api.openweathermap.org/data/2.5/weather?q={}&appid={}",
