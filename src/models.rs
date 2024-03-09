@@ -1,17 +1,17 @@
 use serde::Deserialize;
 
 #[derive(Deserialize)]
-struct WeatherData {
-    main: Main,
-    weather: Vec<Weather>
+pub struct WeatherData {
+    pub main: Main,
+    pub weather: Vec<Weather>
 }
 
 #[derive(Deserialize)]
-struct Main {
-    temp: f64
+pub struct Main {
+    pub temp: f64
 }
 
 #[derive(Deserialize)]
-struct Weather {
-    description: String
+pub struct Weather {
+    pub description: String
 }
